@@ -42,10 +42,10 @@ class Linker:
 
 def jumpToReloc(bv,addr):
     sym = bv.get_symbol_at(addr)
-    print(sym)
+    sym_name = sym.name.split("@")[0]
     if sym != None and sym.type==SymbolType.ImportAddressSymbol:
-        if sym.name[:-4] in bv.session_data.relocs.keys():
-            found = bv.session_data.relocs[sym.name[:-4]]
+        if sym_name in bv.session_data.relocs.keys():
+            found = bv.session_data.relocs[sym_name]
             lib_bv = list(found.keys())[0]
             lib_name = lib_bv.file.filename
             address = found[lib_bv]
