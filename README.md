@@ -20,3 +20,17 @@ This plugin requires the following minimum version of Binary Ninja:
 ## License
 
 This plugin is released under a [MIT](LICENSE) license. ? idk
+
+
+## Uses
+
+# Enables CheckSec and displayes all required libs
+![](media/screensho1.png)
+![](media/main_view.gif)
+
+# Add Library to binary
+![](media/add_library.gif)
+
+# Follow Call 
+If I was trying to analyze this binary and ran into the function `imp_log_fun` and wanted to know what it does
+![](media/follow_call.gif)
